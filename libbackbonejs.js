@@ -11,5 +11,13 @@
  */
 
 ------- customscript.js
-
+/**
+ * backbone script file
+ * backbone version 1.2.3 
+ */
+jQuery(document).ready(function($){ alert('this'); });
+(function( $ ) {
+    "use strict";  
+    // javascript code here. i.e.: $(document).ready( function(){} ); 
+})(jQuery);
  
