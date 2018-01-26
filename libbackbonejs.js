@@ -9,6 +9,13 @@
  * format written at the client side. 
  * BackboneJS has a soft dependency with jQuery and a hard dependency with Underscore.js.
  */
+------- functions.php
+//exclusive scripts
+//wp_enqueue_script( 'jquery', '', '', '1.0', true); 
+wp_enqueue_script( 'underscore', '', array('jquery'), '1.8.3', true ); 
+wp_enqueue_script( 'backbone', '', array('underscore'), '1.2.3', true );
+wp_enqueue_script( 'customjs', get_theme_file_uri( '/assets/js/customscript.js' ), array('backbone'), '0.1', true ); 
+wp_enqueue_script( 'customjs', get_theme_file_uri( '/assets/js/customscript.js' ), array('jquery', 'underscore', 'backbone'), '0.1', true ); 
 
 ------- customscript.js
 /**
